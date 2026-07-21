@@ -283,7 +283,7 @@ export const SERVICES_DATA = {
     tag: 'Content',
     eyebrow: 'Content & Branding',
     titleLines: ['Build brands', { text: 'people trust', accent: true }, 'and remember'],
-    lead: 'Corentix Labs creates modern digital branding systems, visual identities, content direction, creative strategies, and scalable brand experiences for startups and modern businesses.',
+    lead: 'Corentix creates modern digital branding systems, visual identities, content direction, creative strategies, and scalable brand experiences for startups and modern businesses.',
     ctaPrimary: 'View Brand Work',
     ctaSecondary: 'Book Brand Consultation',
     stackTags: ['Brand Identity', 'Typography', 'Visual Language', 'Content Design'],
