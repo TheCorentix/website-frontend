@@ -67,7 +67,7 @@ export default function Contact() {
 
           <div className="availability-chip">
             <span className="pulse-dot" />
-            Replying within 4h · CET
+            Replying within 24h
           </div>
 
           <dl className="info-list">
