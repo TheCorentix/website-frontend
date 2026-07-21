@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const STATS = [
   { target: 20, suffix: '+', label: 'Projects Shipped', sub: 'Across SaaS, e-commerce, automation & more' },
   { target: 3, suffix: '×', label: 'Avg. Growth', sub: 'Average conversion uplift reported by clients' },
-  { target: 99, suffix: '%', label: 'Satisfaction', sub: 'Clients who would recommend Corentix Labs' },
+  { target: 99, suffix: '%', label: 'Satisfaction', sub: 'Clients who would recommend Corentix' },
   { target: 24, suffix: 'h', label: 'Response Time', sub: 'Always reachable, always responsive' },
 ];
 
