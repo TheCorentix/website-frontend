@@ -73,7 +73,7 @@ export default function Contact() {
           <dl className="info-list">
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:corentixlabs@gmail.com">corentixlabs@gmail.com</a></dd>
+              <dd><a href="mailto:thecorentix@gmail.com">thecorentix@gmail.com</a></dd>
             </div>
             <div>
               <dt>Response Time</dt>
