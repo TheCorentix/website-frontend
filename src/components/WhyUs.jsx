@@ -23,7 +23,7 @@ export default function WhyUs() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="eyebrow">Why Corentix Labs</span>
+          <span className="eyebrow">Why Corentix</span>
           <h2>The team that delivers</h2>
           <p>
             A tight-knit team of specialists who've shipped products that
