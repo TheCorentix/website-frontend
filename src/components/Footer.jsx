@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
           <div>
             <h4>Connect</h4>
-            <a href="mailto:corentixlabs@gmail.com">corentixlabs@gmail.com</a>
+            <a href="mailto:thecorentix@gmail.com">thecorentix@gmail.com</a>
             <Link to="/#contact">Start a project</Link>
           </div>
         </div>
