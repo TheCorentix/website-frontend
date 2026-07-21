@@ -108,7 +108,7 @@ export default function Hero() {
               <span className="cx-serif-italic">engineered with</span> intelligence.
             </h1>
             <p className="cx-lead">
-              Corentix Labs builds web platforms, AI agents and automation systems
+              Corentix builds web platforms, AI agents and automation systems
               for teams who need it done right the first time — one team, every
               skill, zero hand-offs.
             </p>
