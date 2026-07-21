@@ -45,7 +45,7 @@ export default function CompanyName() {
   });
 
   return (
-    <section className="name-reveal" aria-label="What Corentix Labs stands for" ref={ref}>
+    <section className="name-reveal" aria-label="What Corentix stands for" ref={ref}>
       <div className="wrap">
         <motion.p
           className="eyebrow center"
