@@ -35,7 +35,7 @@ export default function CoreEngine() {
           <div className="svc-hero-grid">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span className="svc-eyebrow">Core Engine</span>
-              <h1 className="svc-h1">The people <span className="svc-accent">behind</span> Corentix Labs</h1>
+              <h1 className="svc-h1">The people <span className="svc-accent">behind</span> Corentix </h1>
               <p className="svc-lead">
                 We're a small, senior team of builders — engineers, designers, and growth
                 strategists — working as one accountable unit instead of a chain of vendors.
