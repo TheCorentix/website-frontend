@@ -28,7 +28,7 @@
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
+html{ scroll-behavior:smooth; overflow-x:hidden; }
 html,body{ color:var(--text); }
 body{
   font-family:var(--font-body);
@@ -861,7 +861,7 @@ body::after{
 /* ---------- Company name reveal ---------- */
 .name-reveal{ padding:80px 0 min(12vw,120px); position:relative; }
 .eyebrow.center{ justify-content:center; }
-.name-kinetic-stage{ position:relative; }
+.name-kinetic-stage{ position:relative; overflow:hidden; }
 .name-row{
   display:flex; justify-content:center; flex-wrap:wrap;
   gap:clamp(10px,2vw,22px);
@@ -1305,4 +1305,3 @@ main{
     filter: blur(6px);
   }
 }
-
