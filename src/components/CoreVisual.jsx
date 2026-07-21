@@ -1,11 +1,12 @@
-import { Bot, Zap, Globe, Palette, Cloud, Rocket, Hexagon } from 'lucide-react';
+import { Bot, Zap, Globe, Palette, Cloud, Megaphone } from 'lucide-react';
+import logoMark from '../assets/logo-mark.png';
 
 const NODES = [
   { icon: Bot, title: 'AI Agents', sub: 'Smart Solutions', pos: 'n' },
   { icon: Globe, title: 'Web', sub: 'Scalable Apps', pos: 'ne' },
   { icon: Palette, title: 'Design', sub: 'Beautiful UI/UX', pos: 'se' },
   { icon: Cloud, title: 'Cloud', sub: 'Secure & Reliable', pos: 's' },
-  { icon: Rocket, title: 'Growth', sub: 'Scale Faster', pos: 'sw' },
+  { icon: Megaphone, title: 'Marketing', sub: 'Reach & Convert', pos: 'sw' },
   { icon: Zap, title: 'Automation', sub: 'Work Smarter', pos: 'nw' },
 ];
 
@@ -83,6 +84,10 @@ export default function CoreVisual() {
           box-shadow:0 0 30px rgba(255,90,30,0.35), inset 0 0 18px rgba(255,138,80,0.25);
         }
         .cv-core-hex svg{ color:#FFCBA4; filter:drop-shadow(0 0 6px rgba(255,138,80,0.7)); }
+        .cv-core-logo{
+          width:62%; height:62%; object-fit:contain;
+          filter:drop-shadow(0 0 8px rgba(255,138,80,0.7));
+        }
         .cv-core-label{
           position:absolute; bottom:-26px; left:50%; transform:translateX(-50%);
           font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.18em;
@@ -174,8 +179,8 @@ export default function CoreVisual() {
 
       <div className="cv-core">
         <span className="cv-core-glow" aria-hidden="true" />
-        <span className="cv-core-hex"><Hexagon size={28} strokeWidth={1.5} /></span>
-        <span className="cv-core-label">AI Core</span>
+        <span className="cv-core-hex"><img src={logoMark} alt="Corentix Labs" className="cv-core-logo" /></span>
+        <span className="cv-core-label">Corentix Labs</span>
       </div>
 
       {NODES.map((n, i) => {
