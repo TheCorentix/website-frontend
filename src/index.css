@@ -337,7 +337,7 @@ body::after{
   border-bottom:1px solid var(--line);
   display:flex; flex-direction:column; padding:8px var(--edge) 24px; gap:18px;
 }
-.mobile-nav a{ font-size:16px; color:var(--text-dim); }
+.mobile-nav a{ font-size:16px; color:var(--text); }
 .mobile-nav .btn{ margin-top:8px; align-self:flex-start; }
 .mobile-nav .btn-primary{ color:#05060B; }
 
