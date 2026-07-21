@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-brand">
           <div className="footer-logo">
             <img src={logoMark} alt="" width="30" height="30" />
-            <span className="footer-logo-name">Corentix<span className="footer-logo-labs">&nbsp;Labs</span></span>
+            <span className="footer-logo-name">Corentix<span className="footer-logo-labs">&nbsp;</span></span>
           </div>
           <p>Core Operational &amp; Revenue Engineering — Navigated by Technology, Intelligence, and eXperience.</p>
         </div>
@@ -32,8 +32,8 @@ export default function Footer() {
       </div>
 
       <div className="wrap footer-bottom">
-        <span>© {year} Corentix Labs. All rights reserved.</span>
-        <span>Hyderabad, India </span>
+        <span>© {year} Corentix  All rights reserved.</span>
+        <span>18, Hill County, Maytas, Bachupally, Hyderabad, 500090, India </span>
       </div>
     </footer>
   );
