@@ -32,7 +32,7 @@ export default function Header() {
           <span className="brand-mark" aria-hidden="true">
             <img src={logoMark} alt="" width="30" height="30" />
           </span>
-          <span className="brand-name">Corentix<span className="brand-labs">&nbsp;Labs</span></span>
+          <span className="brand-name">Corentix<span className="brand-labs">&nbsp;</span></span>
         </Link>
 
         <nav className="site-nav" aria-label="Primary">
