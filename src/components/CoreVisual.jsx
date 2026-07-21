@@ -180,7 +180,7 @@ export default function CoreVisual() {
       <div className="cv-core">
         <span className="cv-core-glow" aria-hidden="true" />
         <span className="cv-core-hex"><img src={logoMark} alt="Corentix Labs" className="cv-core-logo" /></span>
-        <span className="cv-core-label">Corentix Labs</span>
+        <span className="cv-core-label">Corentix</span>
       </div>
 
       {NODES.map((n, i) => {
