@@ -102,7 +102,7 @@ export default function Hero() {
       <div className="cx-wrap">
         <div className="cx-hero-grid">
           <div className="cx-hero-copy">
-            <span className="cx-eyebrow">Corentix Labs · Est. 2024</span>
+            <span className="cx-eyebrow">Corentix · Est. 2024</span>
             <h1>
               Digital systems, <br />
               <span className="cx-serif-italic">engineered with</span> intelligence.
