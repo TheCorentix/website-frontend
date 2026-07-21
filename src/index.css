@@ -339,6 +339,7 @@ body::after{
 }
 .mobile-nav a{ font-size:16px; color:var(--text-dim); }
 .mobile-nav .btn{ margin-top:8px; align-self:flex-start; }
+.mobile-nav .btn-primary{ color:#05060B; }
 
 /* ---------- Shared gradient-ring button + ghost link (used in Hero & Service pages) ---------- */
 .cx-btn-primary{
