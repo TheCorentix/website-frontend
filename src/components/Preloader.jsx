@@ -37,7 +37,7 @@ export default function Preloader({ show }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
           >
-            Corentix Labs
+            Corentix 
           </motion.p>
         </motion.div>
       )}
