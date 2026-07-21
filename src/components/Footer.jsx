@@ -33,7 +33,7 @@ export default function Footer() {
 
       <div className="wrap footer-bottom">
         <span>© {year} Corentix Labs. All rights reserved.</span>
-        <span>Hyderabad, India · Remote OK</span>
+        <span>Hyderabad, India </span>
       </div>
     </footer>
   );
