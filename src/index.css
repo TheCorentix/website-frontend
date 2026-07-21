@@ -288,11 +288,11 @@ body::after{
 .brand-labs{ color:var(--text-dim); font-weight:500; }
 .site-nav{ display:flex; gap:36px; }
 .site-nav a{
-  font-size:14.5px; color:var(--text-dim);
+  font-size:14.5px; color:var(--text);
   position:relative; padding:6px 0;
   transition:color .25s;
 }
-.site-nav a:hover{ color:var(--text); }
+.site-nav a:hover{ color:var(--cyan); }
 .site-nav a::after{
   content:''; position:absolute; left:0; right:100%; bottom:0; height:1px;
   background:var(--cyan); transition:right .3s ease;
