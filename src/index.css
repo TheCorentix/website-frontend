@@ -895,6 +895,36 @@ body::after{
   position:relative; z-index:1;
 }
 
+/* --- Mobile fix: letters were overflowing/clipping (looked like a fade-out) --- */
+@media (max-width:640px){
+  .name-row{
+    gap:6px;
+    margin-top:32px;
+    flex-wrap:wrap;
+  }
+  .name-cell{
+    width:auto;
+    min-width:0;
+    flex:0 1 auto;
+    padding:0 2px;
+  }
+  .name-letter{
+    font-size:clamp(26px,9vw,40px);
+    text-shadow:0 0 20px #ff5a1e80, 0 0 34px #ff5a1e40;
+    filter:drop-shadow(0 0 8px #ff5a1e40);
+  }
+  .name-word{
+    font-size:8.5px;
+    letter-spacing:0;
+  }
+  .name-word em{ font-size:7.5px; }
+}
+
+@media (max-width:400px){
+  .name-row{ gap:4px; }
+  .name-letter{ font-size:clamp(22px,8vw,34px); }
+}
+
 /* ---------- Services grid (uniform, compact) ---------- */
 .service-grid{
   display:grid;
