@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const LETTERS = [
   { l: 'C', word: 'Core' },
@@ -11,13 +11,30 @@ const LETTERS = [
   { l: 'I', word: 'Intelligence', sub: '(AI)' },
   { l: 'X', word: 'eXperience' },
 ];
-
 const CENTER = (LETTERS.length - 1) / 2;
 
-function KineticLetter({ item, i, progress }) {
+function useIsMobile(breakpoint = 640) {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth <= breakpoint : false
+  );
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= breakpoint);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [breakpoint]);
+  return isMobile;
+}
+
+function KineticLetter({ item, i, progress, isMobile }) {
   const dir = i - CENTER; // negative left of center, positive right
-  const x = useTransform(progress, [0, 1], [0, dir * 46]);
-  const opacity = useTransform(progress, [0, 0.7], [1, 0.15]);
+
+  // On mobile: much smaller spread, and never fade below 0.6 opacity
+  const spread = isMobile ? 12 : 46;
+  const minOpacity = isMobile ? 0.6 : 0.15;
+  const fadeEnd = isMobile ? 1 : 0.7; // spread the fade over the FULL scroll on mobile
+
+  const x = useTransform(progress, [0, 1], [0, dir * spread]);
+  const opacity = useTransform(progress, [0, fadeEnd], [1, minOpacity]);
 
   return (
     <motion.div
@@ -39,6 +56,7 @@ function KineticLetter({ item, i, progress }) {
 
 export default function CompanyName() {
   const ref = useRef(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
@@ -56,15 +74,13 @@ export default function CompanyName() {
         >
           Decoding the name
         </motion.p>
-
         <div className="name-kinetic-stage">
           <div className="name-row" style={{ perspective: 1000 }}>
             {LETTERS.map((item, i) => (
-              <KineticLetter key={item.l} item={item} i={i} progress={scrollYProgress} />
+              <KineticLetter key={item.l} item={item} i={i} progress={scrollYProgress} isMobile={isMobile} />
             ))}
           </div>
         </div>
-
         <motion.p
           className="name-sentence"
           initial={{ opacity: 0, y: 12 }}
