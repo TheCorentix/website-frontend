@@ -28,21 +28,20 @@ function useIsMobile(breakpoint = 640) {
 function KineticLetter({ item, i, progress, isMobile }) {
   const dir = i - CENTER; // negative left of center, positive right
 
-  // On mobile: much smaller spread, and never fade below 0.6 opacity
+  // On mobile: much smaller spread. Opacity is now handled ONLY by
+  // whileInView below (never mix a scroll-linked motion value with an
+  // animate/whileInView prop on the same CSS property — Framer Motion
+  // can't reconcile the two and letters get stuck half-animated).
   const spread = isMobile ? 12 : 46;
-  const minOpacity = isMobile ? 0.6 : 0.15;
-  const fadeEnd = isMobile ? 1 : 0.7; // spread the fade over the FULL scroll on mobile
-
   const x = useTransform(progress, [0, 1], [0, dir * spread]);
-  const opacity = useTransform(progress, [0, fadeEnd], [1, minOpacity]);
 
   return (
     <motion.div
       className="name-cell"
-      style={{ x, opacity }}
+      style={{ x }}
       initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
       whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      viewport={{ once: true, amount: 0.6 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
     >
       <span className="name-letter">{item.l}</span>
