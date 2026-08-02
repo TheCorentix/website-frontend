@@ -21,7 +21,7 @@ export default function Footer() {
             <Link to="/#projects">Projects</Link>
             <Link to="/#process">Process</Link>
             <Link to="/core-engine">Core Engine</Link>
-            <Link to="/#about">About Us</Link>
+            <Link to="/#about">Why Us</Link>
           </div>
           <div>
             <h4>Connect</h4>
